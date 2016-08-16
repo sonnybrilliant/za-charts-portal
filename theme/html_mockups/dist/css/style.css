@@ -6607,6 +6607,11 @@ body {
   color: #C9D4F6;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
+.login-screen-back {
+    background: url(../images/backgrounds/collage_tile_tiles_music___f_1920x1080.jpg);
+    background-position: top left;
+    background-size: cover;
+}
 /*404 Page*/
 .page-error {
   margin-top: 80px;
