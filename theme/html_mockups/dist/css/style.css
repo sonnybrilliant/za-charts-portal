@@ -6563,7 +6563,8 @@ body {
 }
 .login-container .block-flat .header {
   padding: 9px 20px;
-  background: #eb6100;
+/*  background: #eb6100;*/
+  background: #fff;
   border-bottom: 1px solid #eee;
 }
 .login-container .block-flat .header h3 {
@@ -6611,6 +6612,27 @@ body {
     background: url(../images/backgrounds/collage_tile_tiles_music___f_1920x1080.jpg);
     background-position: top left;
     background-size: cover;
+}
+.form-divider {
+    margin: 20px 0;
+    position: relative;
+    display: block;
+}
+.form-divider:after,
+.form-divider:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-bottom: 1px solid #666;
+    width: 43%;
+}
+.form-divider:after {
+    top: 11px;
+    right: 0;
+}
+.form-divider:before {
+    top: 11px;
+    left: 0;
 }
 /*404 Page*/
 .page-error {
