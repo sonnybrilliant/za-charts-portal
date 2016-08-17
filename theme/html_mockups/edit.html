@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <title>NuMtro MobiTickets</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:300,200,100' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dist/js/bootstrap.switch/bootstrap-switch.min.css" />
+	<link rel="stylesheet" type="text/css" href="dist/js/bootstrap.datetimepicker/css/bootstrap-datetimepicker.min.css" />
+
+	<!-- Select2 -->
+	<link rel="stylesheet" type="text/css" href="dist/js/jquery.select2/select2.css" />
+	
+	
+	<!-- Slider -->
+	<link rel="stylesheet" type="text/css" href="dist/js/bootstrap.slider/css/slider.css" />
+  
+  <!-- DateRange -->
+	<link rel="stylesheet" type="text/css" href="dist/js/bootstrap.daterangepicker/daterangepicker-bs3.css" />
+  
+  <!-- Custom styles for this template -->
+  <link href="dist/css/style.css" rel="stylesheet" />
+      <link href="style-override1.css" rel="stylesheet" />
+	<link rel="stylesheet" href="App/css/pygments.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="dist/js/jquery.nanoscroller/nanoscroller.css" />
+  <link href="dist/js/jquery.icheck/skins/square/blue.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<div id="head-nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-user"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="mobi-logo"></span><span><strong>Mobi</strong>Tickets</span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        
+    <ul class="nav navbar-nav navbar-right user-nav">
+      <li class="dropdown profile_menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img alt="Avatar" src="dist/images/avatar2.jpg" /><span>Welcome Brian</span> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Messages</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Sign Out</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right not-nav" >
+
+      <li class="button dropdown">
+        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span class="bubble">2</span></a>
+        <ul class="dropdown-menu">
+          <li>
+            <div class="nano nscroller">
+              <div class="content">
+                <ul>
+                  <li><a href="#"><i class="fa fa-cloud-upload info"></i><b>Daniel</b> is now following you <span class="date">2 minutes ago.</span></a></li>
+                  <li><a href="#"><i class="fa fa-male success"></i> <b>Michael</b> is now following you <span class="date">15 minutes ago.</span></a></li>
+                  <li><a href="#"><i class="fa fa-bug warning"></i> <b>Mia</b> commented on post <span class="date">30 minutes ago.</span></a></li>
+                  <li><a href="#"><i class="fa fa-credit-card danger"></i> <b>Andrew</b> killed someone <span class="date">1 hour ago.</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="foot"><li><a href="#">View all activity </a></li></ul>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+      </div><!--/.nav-collapse animate-collapse -->
+    </div>
+  </div>
+
+
+<div id="cl-wrapper">
+		<div class="cl-sidebar" data-position="right" data-step="1" data-intro="<strong>Fixed Sidebar</strong> <br/> It adjust to your needs." >
+			<div class="cl-toggle"><i class="fa fa-bars"></i></div>
+			<div class="cl-navblock">
+        <div class="menu-space">
+          <div class="content">
+            <div class="side-user">
+              <div class="info">
+                <p>Your Available Tickets: 133 / 400<a href="#"><i class="fa fa-plus"></i></a></p>
+                <div class="progress progress-user">
+                  <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-info">
+                    <span class="sr-only">50% Complete (success)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="cl-vnavigation">
+              <li><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
+
+              </li>
+              <li><a href="#"><i class="fa fa-smile-o"></i><span>Clients</span></a>
+                <ul class="sub-menu">
+                  <li><a href="add.html">Add new client</a></li>
+                  <li><a href="clients.html">View clients</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-list-alt"></i><span>Inventory</span></a>
+                <ul class="sub-menu">
+                  <li><a href="add-inventory.html">Assign inventory</a></li>
+                  <li><a href="inventory.html">View inventory</a></li>
+                  <li><a href="#">Create ticket type</a></li>
+                  </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-table"></i><span>Export</span></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Batch export</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-user nav-icon"></i><span>Operators</span></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Add operator</a></li>
+                  <li><a href="#">View operators</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-bar-chart-o nav-icon"></i><span>Reports</span></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Available reports</a></li>
+                  <li><a href="#">Redeemed vouchers</a></li>
+                  <li><a href="#">3rd party vouchers</a></li>
+                  <li><a href="#">Vouchers sent</a></li>
+                  <li><a href="#">Voucher lookup</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-mobile nav-icon"></i><span>Promo SMS</span></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Promo SMS list</a></li>
+                  <li><a href="#">Add promo SMS</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="text-right collapse-button" style="padding:7px 9px;">
+
+          <button id="sidebar-collapse" class="btn btn-default" style=""><i style="color:#fff;" class="fa fa-angle-left"></i></button>
+        </div>
+			</div>
+		</div>
+ 
+  <div class="container-fluid" id="pcont">
+    <div class="page-head">
+      <h2>Edit Client</h2>
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li class="active">Edit Client</li>
+      </ol>
+    </div>
+    <div class="cl-mcont">
+    
+    <div class="row">
+      <div class="col-md-12">
+        
+        <div class="block-flat">
+         
+            
+            <div class="content">
+                 <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <i class="fa fa-warning sign"></i><strong>Alert!</strong> Fields marked with a <strong class="color-danger">*</strong> denote a required field.
+                 </div>
+            </div>
+            
+          <div class="content">
+              <form class="form-horizontal group-border-dashed" action="#" style="border-radius: 0px;">
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Client Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" placeholder="Client Name">					
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Ticket Types *</label>
+                <div class="col-sm-6">
+                  <div class="radio"> 
+                    <label> <input type="checkbox" name="check1" checked class="icheck"> Nu Metro 2D Tickets</label> 
+                  </div>
+                  <div class="radio"> 
+                    <label> <input type="checkbox" name="check2" checked class="icheck"> Nu Metro 3D Tickets</label> 
+                  </div>
+                </div>
+              </div>
+            <div class="form-group">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <button class="btn btn-success" type="submit">Update Client</button>
+                  <button class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div>
+
+        
+        
+      </div>
+    </div>
+    
+    </div>
+  </div> 
+</div>
+    
+  <script src="dist/js/jquery.js"></script>
+  <script src="dist/js/jquery.select2/select2.min.js" type="text/javascript"></script>
+  <script src="dist/js/jquery.parsley/dist/parsley.js" type="text/javascript"></script>
+  <script src="dist/js/bootstrap.slider/js/bootstrap-slider.js" type="text/javascript"></script>
+	<script type="text/javascript" src="dist/js/jquery.nanoscroller/jquery.nanoscroller.js"></script>
+	<script type="text/javascript" src="dist/js/jquery.nestable/jquery.nestable.js"></script>
+	<script type="text/javascript" src="dist/js/behaviour/general.js"></script>
+  <script src="dist/js/jquery.ui/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.switch/bootstrap-switch.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="dist/js/jquery.icheck/icheck.min.js"></script>
+  <script type="text/javascript" src="dist/js/bootstrap.daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="dist/js/bootstrap.daterangepicker/daterangepicker.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //initialize the javascript
+      App.init();
+      
+      $('#reservation').daterangepicker();
+      $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        format: 'MM/DD/YYYY h:mm A'
+      });
+      var cb = function(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        alert("Callback has fired: [" + start.format('MMMM D, YYYY') + " to " + end.format('MMMM D, YYYY') + "]");
+      }
+
+      var optionSet1 = {
+        startDate: moment().subtract('days', 29),
+        endDate: moment(),
+        minDate: '01/01/2012',
+        maxDate: '12/31/2014',
+        dateLimit: { days: 60 },
+        showDropdowns: true,
+        showWeekNumbers: true,
+        timePicker: false,
+        timePickerIncrement: 1,
+        timePicker12Hour: true,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+           'Last 7 Days': [moment().subtract('days', 6), moment()],
+           'Last 30 Days': [moment().subtract('days', 29), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+        },
+        opens: 'left',
+        buttonClasses: ['btn'],
+        applyClass: 'btn-small btn-primary',
+        cancelClass: 'btn-small',
+        format: 'MM/DD/YYYY',
+        separator: ' to ',
+        locale: {
+            applyLabel: 'Submit',
+            cancelLabel: 'Clear',
+            fromLabel: 'From',
+            toLabel: 'To',
+            customRangeLabel: 'Custom',
+            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            firstDay: 1
+        }
+      };
+
+      var optionSet2 = {
+        startDate: moment().subtract('days', 7),
+        endDate: moment(),
+        opens: 'left',
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+           'Last 7 Days': [moment().subtract('days', 6), moment()],
+           'Last 30 Days': [moment().subtract('days', 29), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+        }
+      };
+
+      $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+      $('#reportrange').daterangepicker(optionSet1, cb);
+
+    });
+  </script>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+    <script src="dist/js/behaviour/voice-commands.js"></script>
+  <script src="dist/js/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
