@@ -166,11 +166,12 @@ fieldset {
 }
 
 .navbar-default .navbar-brand {
-  padding-left: 160px;
+/*  padding-left: 160px;*/
+  padding-left: 218px;
   text-align: left;
   width: 206px;
   color: #FFF;
-  background: url(dist/images/za-charts-logo-white.png) no-repeat no-repeat 13px 12px;
+  background: url(dist/images/za-charts-logo-white-sm.png) no-repeat no-repeat 13px 12px;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   font-weight: 300;
   font-size: 19px;
