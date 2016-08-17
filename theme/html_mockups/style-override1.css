@@ -337,7 +337,9 @@ fieldset {
 .p-i i {
     padding-right: 5px;
 }
-
+.input-group .btn {
+    line-height: 24px;
+}
 /* Profile */
 .name {
     margin-bottom: 0;
