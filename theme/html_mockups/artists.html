@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="dist/images/favicon.png">
 
-    <title>ZA Charts - Artists</title>
+    <title>ZA Charts - List Artists</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
@@ -50,7 +50,7 @@
 
     <ul class="nav navbar-nav navbar-right user-nav">
       <li class="dropdown profile_menu">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img alt="Avatar" src="dist/images/avatar2.jpg" /><span>Welcome Brian</span> <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img alt="Avatar" src="dist/images/avatar2.jpg" /><span>Welcome Don</span> <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="#">My Account</a></li>
           <li><a href="#">Profile</a></li>
@@ -95,7 +95,7 @@
           <div class="content">
             <div class="side-user">
               <div class="info">
-                <p>Current songs playing: 133 / 423<a href="#"><i class="fa fa-plus"></i></a></p>
+                <p>Total playlisted songs: 5891 / 6980<a href="#"><i class="fa fa-plus"></i></a></p>
                 <div class="progress progress-user">
                   <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-info">
                     <span class="sr-only">50% Complete (success)</span>
@@ -107,32 +107,38 @@
               <li><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
 
               </li>
-              <li><a href="#"><i class="fa fa-smile-o"></i><span>Artists</span></a>
-                <ul class="sub-menu">
-                  <li><a href="add.html">Add new artist</a></li>
-                  <li class="active"><a href="clients.html">View artists</a></li>
-                </ul>
-              </li>
-              <li><a href="#"><i class="fa fa-table"></i><span>Record Labels</span></a>
+              <li><a href="#"><i class="fa fa-building-o"></i><span>Record Labels</span></a>
                 <ul class="sub-menu">
                   <li><a href="add-inventory.html">Assign label</a></li>
                   <li><a href="inventory.html">View labels</a></li>
                   <li><a href="#">Link artist</a></li>
                   </ul>
               </li>
-              <li><a href="#"><i class="fa fa-list-alt tab"></i><span>Charts</span></a>
+              <li><a href="#"><i class="fa fa-microphone"></i><span>Artists</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="add.html"><i class="fa fa-plus-circle"></i><span>Add new artist</span></a></li>
+                        <li class="active"><a href="clients.html"><i class="fa fa-list"></i><span>View artists</span></a></li>
+                    </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-music"></i><span>Songs</span></a>
                 <ul class="sub-menu">
                   <li><a href="#">Nation</a></li>
                   <li><a href="#">Provincial</a></li>
                   <li><a href="#">Top 20</a></li>
                 </ul>
               </li>
-              <li><a href="#"><i class="fa fa-user nav-icon"></i><span>Admin</span></a>
+              <li><a href="#"><i class="fa fa-volume-up"></i><span>Radio stations</span></a>
                 <ul class="sub-menu">
                   <li><a href="#">Add operator</a></li>
                   <li><a href="#">View operators</a></li>
                 </ul>
               </li>
+                <li><a href="#"><i class="fa fa-building-o"></i><span>Royalty Agencies</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add operator</a></li>
+                        <li><a href="#">View operators</a></li>
+                    </ul>
+                </li>
               <li><a href="#"><i class="fa fa-bar-chart-o nav-icon"></i><span>Reports</span></a>
                 <ul class="sub-menu">
                   <li><a href="#">Available reports</a></li>
@@ -142,12 +148,18 @@
                   <li><a href="#">Voucher lookup</a></li>
                 </ul>
               </li>
-              <li><a href="#"><i class="fa fa-mobile nav-icon"></i><span>Promo SMS</span></a>
+              <li><a href="#"><i class="fa fa-user"></i><span>Users</span></a>
                 <ul class="sub-menu">
                   <li><a href="#">Promo SMS list</a></li>
                   <li><a href="#">Add promo SMS</a></li>
                 </ul>
               </li>
+                <li><a href="#"><i class="fa fa-gears"></i><span>Settings</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Promo SMS list</a></li>
+                        <li><a href="#">Add promo SMS</a></li>
+                    </ul>
+                </li>
 
             </ul>
           </div>
@@ -161,11 +173,11 @@
 
 		<div class="container-fluid" id="pcont">
 			<div class="page-head">
-				<h2>View artist list</h2>
+				<h2>List Artists</h2>
         <ol class="breadcrumb">
           <li><a href="index.html">Home</a></li>
           <li><a href="clients.html">Artists</a></li>
-          <li class="active">View artists</li>
+          <li class="active">List</li>
         </ol>
 			</div>
 		<div class="cl-mcont">
@@ -205,43 +217,52 @@
                 <table class="table no-border dataTable hover" id="datatable-icons" aria-describedby="datatable-icons_info">
 
                   <thead>
-										<tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-sort="ascending" style="width:43px;" aria-label="ID: activate to sort column descending" ></th><th class="sorting" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Client Name: activate to sort column ascending" style="width: 264px;">Artist Name</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Verified: activate to sort column ascending" style="width: 100px;">Verified</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Independent: activate to sort column ascending" style="width: 100px;">Independent</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 177px;">Status</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 177px;">Action</th></tr>
+										<tr role="row">
+                                            <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-sort="ascending" style="width:43px;" aria-label="ID: activate to sort column descending" ></th>
+                                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Client Name: activate to sort column ascending" style="width: 264px;">Artist Name</th>
+                                            <th class="sorting text-center" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Verified: activate to sort column ascending" style="width: 100px;">Verified</th>
+                                            <th class="sorting text-center" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Independent: activate to sort column ascending" style="width: 100px;">Independent</th>
+                                            <th class="sorting text-center" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 100px;">Status</th>
+                                            <th class="sorting text-center" role="columnheader" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 177px;">Action</th></tr>
 									</thead>
 
 								<tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="gradeA odd">
-											<td class=" sorting_1" style="width:43px;"  ><img src="dist/images/cover.jpg"></img></td>
-											<td class=" ">Artist name</td>
+											<td class=" sorting_1"><input type="checkbox" /> </td>
+											<td>Artist name</td>
                                             <td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
-											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="edit.html" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
+											<td class="text-center">
+                                                <a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a>
+                                                <a class="btn btn-primary btn-sm" href="edit.html" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-edit"></i><span>Edit</span></a>
+                                                <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA even">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-times"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA odd">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA even">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA odd">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA even">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
@@ -255,28 +276,28 @@
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-times"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA even">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA odd">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr><tr class="gradeA even">
 											<td class=" sorting_1" style="width:43px;" ><img src="dist/images/cover.jpg"></img></td>
 											<td class=" ">Artist name</td>
 											<td class=" "><i class="fa fa-check"></i></td>
 											<td class="text-center"><i class="fa fa-check"></i></td>
-                                            <td class="text-center"><span class="label label-success btn-sm">Active</span></td>
+                                            <td class="text-center"><span class="label label-primary btn-sm">Active</span></td>
 											<td class="text-center"><a class="btn btn-default btn-sm" href="#" data-original-title="Open" data-toggle="tooltip"><i class="fa fa-file"></i></a> <a class="btn btn-primary btn-sm" href="#" data-original-title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-xs" href="#" data-original-title="Suspend" data-toggle="tooltip"><i class="fa fa-lock"></i></a></td>
 										</tr></tbody></table><div class="row"><div class="col-sm-12"><div class="pull-left"><div class="dataTables_info" id="datatable-icons_info">Showing 1 to 10 of 57 entries</div></div><div class="pull-right"><div class="dataTables_paginate paging_bs_normal"><ul class="pagination"><li class="prev disabled"><a href="#"><span class="fa fa-angle-left"></span>&nbsp;Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next&nbsp;<span class="fa fa-angle-right"></span></a></li></ul></div></div><div class="clearfix"></div></div></div></div>
 							</div>
