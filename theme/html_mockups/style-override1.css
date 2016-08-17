@@ -333,6 +333,24 @@ fieldset {
   padding-top: 10px;
 }
 
+/* Icons */
+.p-i i {
+    padding-right: 5px;
+}
+
+/* Profile */
+.name {
+    margin-bottom: 0;
+}
+
+/* Pictures */
+.photo {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.13);
+}
+.photo img {
+  width: 100%;
+}
+
 @media (min-width: 979px) {
 
 .cl-sidebar .collapse-button, #cl-wrapper.fixed-menu .menu-space, .cl-sidebar  {
