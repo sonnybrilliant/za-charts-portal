@@ -1,0 +1,41 @@
+<table class="table no-border dataTable hover" id="datatable-icons" aria-describedby="datatable-icons_info">
+
+    <thead>
+    <tr role="row">
+        <th {% if pagination.isSorted('artist.id') %} class="sorted"{% endif %} style="width: 40px;">{{ knp_pagination_sortable(pagination,'#ID', 'artist.id') }}</th>
+        <th {% if pagination.isSorted('artist.name') %} class="sorted"{% endif %} style="width: 100px;">{{ knp_pagination_sortable(pagination,'Name', 'artist.name') }}</th>
+        <th {% if pagination.isSorted('r.name') %} class="sorted"{% endif %} style="width: 120px;">{{ knp_pagination_sortable(pagination,'Record Label', 'r.name') }}</th>
+        <th {% if pagination.isSorted('artist.isLocal') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Is Local?', 'artist.isLocal') }}</th>
+        <th {% if pagination.isSorted('artist.updatedAt') %} class="sorted"{% endif %} style="width: 50px;"><i class="fa fa-calendar"></i>&nbsp;{{ knp_pagination_sortable(pagination,'Updated At', 'artist.updatedAt') }}</th>
+        <th style="width: 120px;"><i class="fa fa-cogs"></i>&nbsp;Action</th></tr>
+    </thead>
+
+    <tbody role="alert" aria-live="polite" aria-relevant="all">
+    {% for artist in pagination %}
+        <tr class="gradeA {{ cycle(['odd', 'even'], loop.index0) }}">
+            <td class=" sorting_1">{{ artist.id }}</td>
+            <td><a href="#" title="{{ artist.name }}" alt="{{ artist.name }}">{{artist.name }}</a></td>
+            <td>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="" title="{{ artist.recordlabel.name }}" alt="{{ artist.recordlabel.name }}" >{{artist.recordlabel.name }}</a>
+                {% else %}
+                    {{ artist.recordlabel.name }}
+                {% endif%}
+            </td>
+            <td>
+                {% if artist.isLocal == '1' %}
+                    <i class="fa fa-check"></i>
+                {% else %}
+                    <i class="fa fa-times"></i>
+                {% endif %}
+            </td>
+           <td>{{artist.updatedAt|date('Y-m-d')}}</td>
+            <td>
+                {#{% if is_granted('ROLE_BATCH_PROFILE') %}#}
+                    <a class="btn btn-default btn-sm" href="{{ path('artist_profile',{slug: artist.slug}) }}" data-original-title="View" data-toggle="tooltip"><i class="fa fa-file"></i>&nbsp;View</a>
+                {#{% endif %}#}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+<table class="table no-border dataTable hover" id="datatable-icons" aria-describedby="datatable-icons_info">
+
+    <thead>
+    <tr role="row">
+        <th {% if pagination.isSorted('song.id') %} class="sorted"{% endif %} style="width: 40px;">{{ knp_pagination_sortable(pagination,'#ID', 'song.id') }}</th>
+        <th {% if pagination.isSorted('song.title') %} class="sorted"{% endif %} style="width: 100px;">{{ knp_pagination_sortable(pagination,'Title', 'song.title') }}</th>
+        <th {% if pagination.isSorted('artist.name') %} class="sorted"{% endif %} style="width: 120px;">{{ knp_pagination_sortable(pagination,'Artist', 'artist.name') }}</th>
+        <th {% if pagination.isSorted('status.title') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Status', 'status.title') }}</th>
+        <th {% if pagination.isSorted('song.publishedAt') %} class="sorted"{% endif %} style="width: 50px;"><i class="fa fa-calendar"></i>&nbsp;{{ knp_pagination_sortable(pagination,'Published At', 'song.publishedAt') }}</th>
+        <th {% if pagination.isSorted('song.updatedAt') %} class="sorted"{% endif %} style="width: 50px;"><i class="fa fa-calendar"></i>&nbsp;{{ knp_pagination_sortable(pagination,'Updated At', 'song.updatedAt') }}</th>
+        <th style="width: 120px;"><i class="fa fa-cogs"></i>&nbsp;Action</th></tr>
+    </thead>
+
+    <tbody role="alert" aria-live="polite" aria-relevant="all">
+    {% for song in pagination %}
+        <tr class="gradeA {{ cycle(['odd', 'even'], loop.index0) }}">
+            <td class=" sorting_1">{{ song.id }}</td>
+            <td><a href="#" title="{{ song.title }}" alt="{{ song.title }}">{{ song.title}}</a></td>
+            <td>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('artist_profile',{slug:song.artist.slug}) }}" title="{{ song.artist.name }}" alt="{{ song.artist.name }}" >{{song.artist.name }}</a>
+                {% else %}
+                    {{ song.artist.name }}
+                {% endif%}
+            </td>
+            <td>
+                {{ song.status.title }}
+            </td>
+           <td>{{song.publishedAt|date('Y-m-d')}}</td>
+           <td>{{song.updatedAt|date('Y-m-d')}}</td>
+            <td>
+                {#{% if is_granted('ROLE_BATCH_PROFILE') %}#}
+                    <a class="btn btn-default btn-sm" href="" data-original-title="View" data-toggle="tooltip"><i class="fa fa-file"></i>&nbsp;View</a>
+                {#{% endif %}#}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

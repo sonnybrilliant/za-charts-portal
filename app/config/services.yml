@@ -4,6 +4,75 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    app.security.login_form_authenticator:
+        class: Mlankatech\AppBundle\Security\LoginFormAuthenticator
+        autowire: true
+
+    app.doctrine.hash_password_listener:
+        class: Mlankatech\AppBundle\Doctrine\HashPasswordListener
+        autowire: true
+        tags:
+            - { name: doctrine.event_subscriber }
+
+    app.status.service:
+        class: Mlankatech\AppBundle\Service\StatusManager
+        autowire: true
+
+    app.user.service:
+        class: Mlankatech\AppBundle\Security\UserService
+        autowire: true
+
+    app.artist.service:
+        class: Mlankatech\AppBundle\Service\ArtistService
+        autowire: true
+
+    app.song.service:
+        class: Mlankatech\AppBundle\Service\SongService
+        autowire: true
+
+    app.alert.service:
+        class: Mlankatech\AppBundle\Service\FlashMessageService
+        autowire: true
+
+
+#TWIG extensions
+    app.form.type.help_message:
+        class: Mlankatech\AppBundle\Form\Extension\HelpMessageTypeExtension
+        tags:
+           - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType}
+
+    app.form.type.pasley_validator:
+        class: Mlankatech\AppBundle\Form\Extension\PasleyValidatorTypeExtension
+        tags:
+           - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType}
+
+    app.form.type.date_icon:
+        class: Mlankatech\AppBundle\Form\Extension\DateIconTypeExtension
+        tags:
+           - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType}
+
+#List handlers
+    app.handler.list.artist:
+        class: Mlankatech\AppBundle\Handler\Artist\ArtistListHandler
+        arguments: ['@app.artist.service','@app.alert.service','@knp_paginator']
+
+    app.handler.list.song:
+        class: Mlankatech\AppBundle\Handler\Song\SongListHandler
+        arguments: ['@app.song.service','@app.alert.service','@knp_paginator']
+
+#Form Handlers
+    app.form.artist.file.uploader:
+        class: Mlankatech\AppBundle\Service\ArtistFileUploaderService
+        arguments: ['%artist_profile_directory%']
+
+    app.form.song.file.uploader:
+        class: Mlankatech\AppBundle\Service\SongFileUploaderService
+        arguments: ['%song_original_directory%']
+
+    app.form.handler.artist.create:
+        class: Mlankatech\AppBundle\Handler\Artist\Form\ArtistCreateHandler
+        arguments: ['@app.artist.service','@app.alert.service','@app.form.artist.file.uploader']
+
+    app.form.handler.song.create:
+        class: Mlankatech\AppBundle\Handler\Song\Form\SongCreateHandler
+        arguments: ['@app.song.service','@app.alert.service','@app.form.song.file.uploader','@app.status.service']

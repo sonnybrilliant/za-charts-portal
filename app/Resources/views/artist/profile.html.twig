@@ -1,0 +1,82 @@
+{% extends ':artist:layout.html.twig' %}
+
+{% block title %}{{ page_header }}{% endblock title %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            {% include 'alert.html.twig'%}
+            <div class="block-flat profile-info">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="avatar">
+                            <img src="{{ asset('uploads/artist/' ~ artist.artistImage) }}" class="profile-avatar">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="personal">
+                            <h1 class="name">{{ artist.name }}</h1>
+                            <div class="p-i">
+                                <i class="fa fa-map-marker"></i>
+                                {{ artist.region }}
+                            </div>
+                            <div class="p-i">
+                                <i class="fa fa-chain"></i>
+                                <a href="">{{ artist.website }}</a>
+                            </div>
+                            <div class="content">
+                                <button type="button" class="btn btn-default btn-facebook bg"><i class="fa fa-facebook"></i></button>
+                                <button type="button" class="btn btn-default btn-twitter bg"><i class="fa fa-twitter"></i></button>
+                                <button type="button" class="btn btn-default btn-youtube bg"><i class="fa fa-youtube-play"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <table class="no-border no-strip skills">
+                            <tbody class="no-border-x no-border-y">
+                            {% if artist.gender is not null %}
+                            <tr>
+                                <td style="width:40%;"><b>Gender</b></td>
+                                <td>{{ artist.gender | upper }}</td>
+                            </tr>
+                            {% endif  %}
+                            <tr>
+                                <td style="width:40%;"><b>Label</b></td>
+                                <td>{{ artist.recordLabel| upper }}</td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%;"><b>Genre</b></td>
+                                <td>
+                                    {% for genre in artist.genres %}
+                                    <a href="">{{ genre | upper }}</a>&nbsp;
+                                    {% endfor %}
+                            </tr>
+                            <tr>
+                                <td style="width:40%;"><b>Is a Local Artist</b> <i class="fa fa-info-circle"></i></td>
+                                <td>
+                                    {% if artist.isLocal %}
+                                        <span class="label label-primary">Yes</span>
+                                    {% else %}
+                                        <span class="label label-default">No</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%;"><b>Is a Band?</b></td>
+                                <td>
+                                    {% if artist.isBand %}
+                                        <span class="label label-primary">Yes</span>
+                                    {% else %}
+                                        <span class="label label-default">No</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

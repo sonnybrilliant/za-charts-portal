@@ -1,0 +1,50 @@
+{% extends ':artist:layout.html.twig' %}
+
+{% block title %}{{ page_header }}{% endblock title %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            {% include '::alert.html.twig'%}
+            <div class="block-flat">
+                <div class="header">
+                    <h4><i>All fields are required.</i></h4>
+                </div>
+                <div class="content">
+                    {% include ":song/forms:create.html.twig" %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('assets/js/jquery.icheck/skins/all.css') }}" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <link rel="stylesheet"type="text/css" href="{{ asset('assets/js/bootstrap.datepicker-1.4.0/css/bootstrap-datepicker.min.css') }}" />
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.datepicker-1.4.0/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.parsley/dist/parsley.min.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //initialize the javascript
+            App.init({
+                nanoScroller: false
+            });
+
+            $('.songPublishedAt').datepicker({
+                format: "yyyy/mm/dd",
+                todayBtn: true,
+                autoclose: true,
+                todayHighlight: true,
+                endDate: new Date()
+            });
+        });
+    </script>
+
+{% endblock javascripts %}

@@ -1,0 +1,91 @@
+<form class="form-horizontal group-border-dashed" action="{{ path('song_new') }}" data-parsley-validate style="border-radius: 0px;"  autocomplete="off" {% if app.debug %}  novalidate="true"{% endif %}  method="POST" enctype="multipart/form-data">
+    <div class="col-sm-12 col-md-12">
+        <fieldset>
+            <legend><i class="fa fa-user"></i>&nbsp;Details</legend>
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.title) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(form.artist) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.album) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(form.songWriter) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.isrc) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(form.featuredArtist) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.originalFile) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(form.publishedAt) }}
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <fieldset>
+            <legend><i class="fa  fa-music"></i>&nbsp;Type of music</legend>
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.genres) }}
+                </div>
+                <div class="col-sm-6">
+                    {#{{ form_row(form.publishedAt) }}#}
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <fieldset>
+            <legend><i class="fa fa-info-circle"></i>&nbsp;Metadata</legend>
+            {#<div class="row">#}
+                {#<div class="col-sm-6">#}
+                    {#{{ form_row(form.isBand) }}#}
+                {#</div>#}
+                {#<div class="col-sm-6">#}
+                    {#{{ form_row(form.isLocal) }}#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="row">#}
+                {#<div class="col-sm-6">#}
+                    {#{{ form_row(form.website) }}#}
+                {#</div>#}
+                {#<div class="col-sm-6">#}
+                    {#{{ form_row(form.region) }}#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="row">#}
+                {#<div class="col-sm-6">#}
+                    {#{{ form_row(form.gender) }}#}
+                {#</div>#}
+                {#<div class="col-sm-6">#}
+                    {#{{ form_row(form.region) }}#}
+                {#</div>#}
+            {#</div>#}
+        </fieldset>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <div class="text-center">
+            <button class="btn btn-danger btn-lg" type="submit" tabindex="9"><i class="fa fa-save"></i> Add</button>
+            <a href="" class="btn btn-default" tabindex="10" title="Cancel" alt="Cancel">Cancel</a>
+        </div>
+    </div>
+    <div class="form-group"></div>
+    {{ form_rest(form) }}
+</form>
+
+
