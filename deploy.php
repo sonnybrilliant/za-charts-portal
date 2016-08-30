@@ -27,5 +27,5 @@ set('assets', ['web/assets/css', 'web/assets/images', 'web/asets/js', 'web/asset
 
 // Environment vars
 
-//set('composer_command', '/usr/local/bin/composer');
+set('composer_command', '/usr/local/bin/composer');
 set('repository', 'git@github.com:sonnybrilliant/za-charts-portal.git');

@@ -30,13 +30,13 @@
         "symfony/assetic-bundle": "^2.8",
         "doctrine/doctrine-migrations-bundle": "^1.1",
         "stof/doctrine-extensions-bundle": "^1.2",
-        "knplabs/knp-paginator-bundle": "^2.5"
+        "knplabs/knp-paginator-bundle": "^2.5",
+        "sensio/generator-bundle": "^3.0",
+        "doctrine/doctrine-fixtures-bundle": "^2.3"
     },
     "require-dev": {
-        "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0",
-        "nelmio/alice": "^2.1",
-        "doctrine/doctrine-fixtures-bundle": "^2.3"
+        "nelmio/alice": "^2.1"
     },
     "scripts": {
         "post-install-cmd": [
