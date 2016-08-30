@@ -1,4 +1,4 @@
-{% extends ':artist:layout.html.twig' %}
+{% extends ':radioStation:layout.html.twig' %}
 
 {% block title %}{{ page_header }}{% endblock title %}
 
@@ -11,7 +11,7 @@
                     <h4><i>All fields are required.</i></h4>
                 </div>
                 <div class="content">
-                    {% include ":artist/forms:create.html.twig" %}
+                    {% include ":radioStation/forms:create.html.twig" %}
                 </div>
             </div>
         </div>
@@ -19,15 +19,7 @@
 {% endblock body %}
 
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link href="{{ asset('assets/js/jquery.icheck/skins/all.css') }}" rel="stylesheet"/>
-{% endblock stylesheets %}
-
-
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('assets/js/jquery.icheck/icheck.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.parsley/dist/parsley.min.js') }}"></script>
-
 {% endblock javascripts %}

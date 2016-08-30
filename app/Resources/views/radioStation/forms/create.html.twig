@@ -1,47 +1,40 @@
-<form class="form-horizontal group-border-dashed" action="{{ path('song_new') }}" data-parsley-validate style="border-radius: 0px;"  autocomplete="off" {% if app.debug %}  novalidate="true"{% endif %}  method="POST" enctype="multipart/form-data">
+<form class="form-horizontal group-border-dashed" action="{{ path('radio_station_add') }}" data-parsley-validate style="border-radius: 0px;"  autocomplete="off" {% if app.debug %}  novalidate="true"{% endif %}  method="POST" enctype="multipart/form-data">
     <div class="col-sm-12 col-md-12">
         <fieldset>
-            <legend><i class="fa fa-user"></i>&nbsp;Details</legend>
+            <legend><i class="fa fa-volume-up"></i>&nbsp;Details</legend>
             <div class="row">
                 <div class="col-sm-6">
-                    {{ form_row(form.title) }}
+                    {{ form_row(form.name) }}
                 </div>
                 <div class="col-sm-6">
-                    {{ form_row(form.artist) }}
+                    {{ form_row(form.frequency) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.website) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(form.contactNumber) }}
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    {{ form_row(form.album) }}
+                    {{ form_row(form.stream) }}
                 </div>
                 <div class="col-sm-6">
-                    {{ form_row(form.songWriter) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    {{ form_row(form.isrc) }}
-                </div>
-                <div class="col-sm-6">
-                    {{ form_row(form.featuredArtist) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    {{ form_row(form.originalFile) }}
-                </div>
-                <div class="col-sm-6">
-                    {{ form_row(form.publishedAt) }}
+                    {#{{ form_row(form.contactNumber) }}#}
                 </div>
             </div>
         </fieldset>
     </div>
     <div class="col-sm-12 col-md-12">
         <fieldset>
-            <legend><i class="fa  fa-music"></i>&nbsp;Type of music</legend>
+            <legend><i class="fa  fa-microphone"></i>&nbsp;Primary languages used by the station</legend>
             <div class="row">
                 <div class="col-sm-6">
-                    {{ form_row(form.genres) }}
+                    {{ form_row(form.languages) }}
                 </div>
                 <div class="col-sm-6">
                     {#{{ form_row(form.publishedAt) }}#}

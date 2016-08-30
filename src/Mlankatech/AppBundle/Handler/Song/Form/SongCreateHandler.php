@@ -14,9 +14,6 @@ class SongCreateHandler
     private $songService;
     private $alert;
     private $uploader;
-    /**
-     * @var StatusManager
-     */
     private $statusManager;
 
     public function __construct(

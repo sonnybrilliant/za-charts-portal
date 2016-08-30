@@ -52,6 +52,7 @@ class CreateSongType extends AbstractType
                     )
                 ))
                 ->add('featuredArtist',TextType::class,array(
+                    'required' => false,
                     'attr' => array(
                         'class' => 'form-control',
                         'tabindex' => '5',
@@ -60,6 +61,7 @@ class CreateSongType extends AbstractType
                     'help' => 'Featured artist'
                 ))
             ->add('isrc',TextType::class,array(
+                'required' => false,
                 'label' => 'ISRC code',
                 'attr' => array(
                     'class' => 'form-control',

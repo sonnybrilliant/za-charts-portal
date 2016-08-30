@@ -41,7 +41,7 @@ class Song
     private $album;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      * @Gedmo\Versioned
      */
     private $featuredArtist;
@@ -80,7 +80,7 @@ class Song
     private $status;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string" ,nullable=true)
      * @Gedmo\Versioned
      */
     private $songWriter;

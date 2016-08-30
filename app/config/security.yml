@@ -5,7 +5,7 @@ security:
         Mlankatech\AppBundle\Entity\User: bcrypt
 
     role_hierarchy:
-        ROLE_ADMIN: [ROLE_ALLOWED_TO_SWITCH,ROLE_DASHBOARD,ROLE_ARTIST,ROLE_SONG,ROLE_RADIO,ROLE_USER]
+        ROLE_ADMIN: [ROLE_ALLOWED_TO_SWITCH,ROLE_DASHBOARD,ROLE_ARTIST,ROLE_SONG,ROLE_RADIO,ROLE_USER,ROLE_RADIO_STATION]
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
