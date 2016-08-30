@@ -8,11 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DashboardController extends Controller
 {
     /**
-     * @Route("/dashboard",name="dashboard_admin")
+     * @Route("/",name="dashboard_admin")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function adminAction()
     {
-        return $this->render('dashboard/admin.html.twig');
+        return $this->render('dashboard/admin.html.twig',array(
+            'action' => 'dashboard_admin'
+        ));
     }
 }
