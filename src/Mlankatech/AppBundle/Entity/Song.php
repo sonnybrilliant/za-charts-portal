@@ -56,7 +56,7 @@ class Song
      * @ORM\Column(type="string")
      *
      * @Assert\NotBlank(message="Please, upload the song.")
-     * @Assert\File(mimeTypes={ "audio/mpeg3", "audio/x-mpeg-3", "video/mpeg", "video/x-mpeg", "audio/mp3", "application/octet-stream" })
+     * @Assert\File(mimeTypes={ "audio/mpeg3", "audio/x-mpeg-3", "video/mpeg", "video/x-mpeg", "audio/mp3", "application/octet-stream","audio/mpeg" })
      */
     private $originalFile;
 
