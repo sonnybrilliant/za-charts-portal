@@ -26,6 +26,6 @@ set('writable_dirs', ['var/cache', 'var/logs' , 'web/uploads','var/sessions']);
 set('assets', ['web/assets/css', 'web/assets/images', 'web/asets/js', 'web/assets/fonts']);
 
 // Environment vars
-
+env('composer_options', 'install  --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction');
 set('composer_command', '/usr/local/bin/composer');
 set('repository', 'git@github.com:sonnybrilliant/za-charts-portal.git');
