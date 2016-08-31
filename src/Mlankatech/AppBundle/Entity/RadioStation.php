@@ -61,6 +61,11 @@ class RadioStation
     private $stream;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $streamId;
+
+    /**
      * @ORM\Column(type="text")
      */
     private $bio;
@@ -128,7 +133,7 @@ class RadioStation
     private $updatedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity="MlankaTech\AppBundle\Entity\User")
+     * @ORM\ManyToOne(targetEntity="Mlankatech\AppBundle\Entity\User")
      */
     private $createdBy;
 
@@ -338,6 +343,16 @@ class RadioStation
     public function setLogo($logo)
     {
         $this->logo = $logo;
+    }
+
+    public function getStreamId()
+    {
+        return $this->streamId;
+    }
+
+    public function setStreamId($streamId)
+    {
+        $this->streamId = $streamId;
     }
 
 }

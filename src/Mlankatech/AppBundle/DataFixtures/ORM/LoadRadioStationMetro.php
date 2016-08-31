@@ -53,6 +53,7 @@ class LoadRadioStationMetro extends AbstractFixture implements OrderedFixtureInt
         $metro->addProvince($this->getReference('province-eastern-cape'));
         $metro->addProvince($this->getReference('province-western-cape'));
 
+        $metro->setStreamId('8661');
         $metro->setCreatedBy($this->getReference('admin'));
 
         $manager->persist($metro);

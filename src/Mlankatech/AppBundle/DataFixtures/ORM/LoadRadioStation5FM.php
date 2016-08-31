@@ -52,6 +52,8 @@ class LoadRadioStation5FM extends AbstractFixture implements OrderedFixtureInter
         $fiveFM->addProvince($this->getReference('province-eastern-cape'));
         $fiveFM->addProvince($this->getReference('province-mpumalanga'));
         $fiveFM->addProvince($this->getReference('province-western-cape'));
+
+        $fiveFM->setStreamId('8660');
         $fiveFM->setCreatedBy($this->getReference('admin'));
         $manager->persist($fiveFM);
         $manager->flush();

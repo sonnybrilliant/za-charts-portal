@@ -38,6 +38,9 @@ services:
         class: Mlankatech\AppBundle\Service\RadioStationService
         autowire: true
 
+    app.radio.station.stream.service:
+        class: Mlankatech\AppBundle\Service\RadioStationStreamService
+        autowire: true
 
 #TWIG extensions
     app.form.type.help_message:
@@ -88,3 +91,7 @@ services:
     app.form.handler.radio.station.create:
         class: Mlankatech\AppBundle\Handler\RadioStation\Form\RadioStationCreateHandler
         arguments: ['@app.radio.station.service','@app.alert.service','@app.status.service']
+
+    app.form.handler.radio.station.stream.create:
+        class: Mlankatech\AppBundle\Handler\RadioStation\RadioStationStreamCreateHandler
+        arguments: ['@app.radio.station.stream.service','@app.alert.service','@app.radio.station.service']

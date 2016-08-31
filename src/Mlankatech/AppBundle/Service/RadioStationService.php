@@ -17,6 +17,11 @@ class RadioStationService
         $this->em = $em;
     }
 
+    public function getByStreamId($streamId)
+    {
+        return $this->em->getRepository('AppBundle:RadioStation')->findOneBy(array('streamId'=>$streamId));
+    }
+
     public function create(RadioStation $radioStation)
     {
         $this->em->persist($radioStation);
