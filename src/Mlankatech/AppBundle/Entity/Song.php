@@ -91,6 +91,11 @@ class Song
     private $isrc;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isCopyWritten = false;
+
+    /**
      * @ORM\Column(type="date", nullable=true)
      * @Gedmo\Versioned
      */
@@ -306,5 +311,16 @@ class Song
     {
         $this->isrc = $isrc;
     }
+
+    public function getIsCopyWritten()
+    {
+        return $this->isCopyWritten;
+    }
+
+    public function setIsCopyWritten($isCopyWritten)
+    {
+        $this->isCopyWritten = $isCopyWritten;
+    }
+
 
 }

@@ -18,26 +18,37 @@ class LoadStatus extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-       $active = new Status();
-       $active->setTitle('active');
-       $active->setCode('active');
-       $manager->persist($active);
+        $active = new Status();
+        $active->setTitle('active');
+        $active->setCode('active');
+        $manager->persist($active);
+        $this->addReference('status-active', $active);
 
-       $suspended = new Status();
-       $suspended->setTitle('suspended');
-       $suspended->setCode('suspended');
-       $manager->persist($suspended);
+        $suspended = new Status();
+        $suspended->setTitle('suspended');
+        $suspended->setCode('suspended');
+        $manager->persist($suspended);
+        $this->addReference('status-suspended',$suspended);
 
-       $expired = new Status();
-       $expired->setTitle('expired');
-       $expired->setCode('expired');
-       $manager->persist($suspended);
+        $expired = new Status();
+        $expired->setTitle('expired');
+        $expired->setCode('expired');
+        $manager->persist($suspended);
+        $this->addReference('status-expired',$expired);
 
+        $streaming = new Status();
+        $streaming->setTitle('streaming');
+        $streaming->setCode('streaming');
+        $manager->persist($streaming);
+        $this->addReference('status-streaming',$streaming);
 
+        $paused = new Status();
+        $paused->setTitle('paused');
+        $paused->setCode('paused');
+        $manager->persist($paused);
+        $this->addReference('status-paused',$paused);
 
-       $manager->flush();
-
-       $this->addReference('active',$active);
+        $manager->flush();
     }
 
     public function getOrder()

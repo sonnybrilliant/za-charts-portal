@@ -7,12 +7,13 @@ use Mlankatech\AppBundle\Form\CreateRadioStationType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 class RadioStationController extends Controller
 {
 
     /**
-     * @Route("/radio/station/list", name="radio_station_list")
+     * @Route("/secured/radio/station/list", name="radio_station_list")
      * @param Request $request
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -31,7 +32,7 @@ class RadioStationController extends Controller
         ));
     }
     /**
-     * @Route("/radio/station/add", name="radio_station_add")
+     * @Route("/secured/radio/station/add", name="radio_station_add")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -51,6 +52,21 @@ class RadioStationController extends Controller
             'action' => 'radio_station_add',
             'page_header' => 'Add radio station',
             'breadcrumb' => 'Add'
+        ));
+    }
+
+    /**
+     * @Route("/secured/radio/station/profile/{slug}" , name="radio_station_profile")
+     * @ParamConverter("artist", class="Mlankatech\AppBundle\Entity\RadioStation")
+     * @param Request $request
+     */
+    public function profileAction(Request $request,RadioStation $radioStation)
+    {
+        return $this->render('radioStation/profile.html.twig',array(
+            'page_header' => $radioStation->getName()." profile",
+            'breadcrumb' => 'Profile',
+            'action' => 'radio_station_profile',
+            'radioStation' => $radioStation
         ));
     }
 }

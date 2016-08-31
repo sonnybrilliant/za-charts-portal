@@ -2,6 +2,7 @@
 
 namespace Mlankatech\AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -24,6 +25,11 @@ class RadioStation
     private $name;
 
     /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $logo;
+
+    /**
      * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(type="string")
      */
@@ -40,14 +46,24 @@ class RadioStation
     private $website;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $contactNumber;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      */
+    private $contactEmail;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
     private $stream;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $bio;
 
     /**
      * @var ArrayCollection
@@ -62,11 +78,42 @@ class RadioStation
     protected $languages;
 
     /**
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="Mlankatech\AppBundle\Entity\Province")
+     * @ORM\JoinTable(name="RADIO_STATION_PROVINCE_MAP",
+     *     joinColumns={@ORM\JoinColumn(name="radio_station_id", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="province_id", referencedColumnName="id")}
+     * )
+     *
+     */
+    protected $provinces;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="Mlankatech\AppBundle\Entity\Genre")
+     * @ORM\JoinTable(name="RADIO_STATION_GENRE_MAP",
+     *     joinColumns={@ORM\JoinColumn(name="radio_station_id", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="genre_id", referencedColumnName="id")}
+     * )
+     *
+     */
+    protected $genres;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Mlankatech\AppBundle\Entity\Status")
      * @ORM\JoinColumn(nullable=false)
      *
      */
     private $status;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Mlankatech\AppBundle\Entity\RadioStationType")
+     * @ORM\JoinColumn(nullable=false)
+     *
+     */
+    private $radioStationType;
 
     /**
      * @Gedmo\Timestampable(on="create")
@@ -79,6 +126,19 @@ class RadioStation
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="MlankaTech\AppBundle\Entity\User")
+     */
+    private $createdBy;
+
+    public function __construct()
+    {
+        $this->genres = new ArrayCollection();
+        $this->provinces = new ArrayCollection();
+        $this->languages = new ArrayCollection();
+
+    }
 
     public function __toString()
     {
@@ -155,6 +215,11 @@ class RadioStation
         $this->languages = $languages;
     }
 
+    public function addLanguage(Language $language)
+    {
+        $this->languages->add($language);
+    }
+
     public function getCreatedAt()
     {
         return $this->createdAt;
@@ -195,5 +260,84 @@ class RadioStation
         $this->slug = $slug;
     }
 
+    public function getBio()
+    {
+        return $this->bio;
+    }
+
+    public function setBio($bio)
+    {
+        $this->bio = $bio;
+    }
+
+    public function getProvinces()
+    {
+        return $this->provinces;
+    }
+
+    public function setProvinces($provinces)
+    {
+        $this->provinces = $provinces;
+    }
+
+    public function addProvince(Province $province)
+    {
+        $this->provinces->add($province);
+    }
+
+    public function getRadioStationType()
+    {
+        return $this->radioStationType;
+    }
+
+    public function setRadioStationType($radioStationType)
+    {
+        $this->radioStationType = $radioStationType;
+    }
+
+    public function getGenres()
+    {
+        return $this->genres;
+    }
+
+    public function setGenres($genres)
+    {
+        $this->genres = $genres;
+    }
+
+    public function addGenre(Genre $genre)
+    {
+        $this->genres->add($genre);
+    }
+
+    public function getContactEmail()
+    {
+        return $this->contactEmail;
+    }
+
+    public function setContactEmail($contactEmail)
+    {
+        $this->contactEmail = $contactEmail;
+    }
+
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+    }
+
+    public function getLogo()
+    {
+        return $this->logo;
+    }
+
+    public function setLogo($logo)
+    {
+        $this->logo = $logo;
+    }
 
 }

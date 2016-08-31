@@ -24,7 +24,8 @@ class RadioStationRepository extends EntityRepository
         }
         $qb = $this->createQueryBuilder('rs')
             ->select('rs')
-            ->innerJoin('rs.status', 'status');
+            ->innerJoin('rs.status', 'status')
+            ->innerJoin('rs.radioStationType', 'type');
 
         $qb->orderBy($options['sort'], $options['direction']);
         return $qb->getQuery();

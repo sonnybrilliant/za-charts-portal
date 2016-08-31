@@ -22,6 +22,7 @@ class LoadGenres extends AbstractFixture implements OrderedFixtureInterface
 
         $genre_afro_pop = new Genre('afro-pop');
         $manager->persist($genre_afro_pop);
+        $this->setReference('genre-afro-pop',$genre_afro_pop);
 
         $genre_african = new Genre('african');
         $manager->persist($genre_african);
@@ -76,6 +77,7 @@ class LoadGenres extends AbstractFixture implements OrderedFixtureInterface
 
         $genre_hip_hop = new Genre('hip-hop');
         $manager->persist($genre_hip_hop);
+        $this->setReference('genre-hip-hop',$genre_hip_hop);
 
         $genre_indie = new Genre('indie');
         $manager->persist($genre_indie);
@@ -100,6 +102,7 @@ class LoadGenres extends AbstractFixture implements OrderedFixtureInterface
 
         $genre_kwaito = new Genre('kwaito');
         $manager->persist($genre_kwaito);
+        $this->setReference('genre-kwaito',$genre_kwaito);
 
         $genre_latino = new Genre('latino');
         $manager->persist($genre_latino);
@@ -112,12 +115,15 @@ class LoadGenres extends AbstractFixture implements OrderedFixtureInterface
 
         $genre_pop = new Genre('pop');
         $manager->persist($genre_pop);
+        $this->setReference('genre-pop',$genre_pop);
 
         $genre_rnb = new Genre('rnb');
         $manager->persist($genre_rnb);
+        $this->setReference('genre-rnb',$genre_rnb);
 
         $genre_rap = new Genre('rap');
         $manager->persist($genre_rap);
+        $this->setReference('genre-rap',$genre_rap);
 
         $genre_soul = new Genre('soul');
         $manager->persist($genre_soul);
@@ -127,6 +133,7 @@ class LoadGenres extends AbstractFixture implements OrderedFixtureInterface
 
         $genre_rock = new Genre('rock');
         $manager->persist($genre_rock);
+        $this->setReference('genre-rock',$genre_rock);
 
         $genre_singer_songwriter = new Genre('singer-songwriter');
         $manager->persist($genre_singer_songwriter);

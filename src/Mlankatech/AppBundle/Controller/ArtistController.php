@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class ArtistController extends Controller
 {
     /**
-     * @Route("/artist/list", name="artist_list")
+     * @Route("/secured/artist/list", name="artist_list")
      * @param Request $request
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -34,7 +34,7 @@ class ArtistController extends Controller
     }
 
     /**
-     * @Route("/artist/add", name="artist_new", requirements={"_format"="html"})
+     * @Route("/secured/artist/add", name="artist_new", requirements={"_format"="html"})
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -57,14 +57,12 @@ class ArtistController extends Controller
     }
 
     /**
-     * @Route("/artist/profile/{slug}" , name="artist_profile")
+     * @Route("/secured/artist/profile/{slug}" , name="artist_profile")
      * @ParamConverter("artist", class="Mlankatech\AppBundle\Entity\Artist")
      * @param Request $request
      */
     public function profileAction(Request $request,Artist $artist)
     {
-
-
         return $this->render('artist/profile.html.twig',array(
             'page_header' => $artist->getName()."'s profile",
             'breadcrumb' => 'Profile',

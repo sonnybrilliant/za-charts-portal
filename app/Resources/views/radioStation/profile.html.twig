@@ -1,0 +1,70 @@
+{% extends ':radioStation:layout.html.twig' %}
+
+
+{% block body %}
+    <div class="row">
+    <div class="col-sm-12">
+        <div class="block-flat profile-info">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="avatar"><img src="{{ asset('assets/images/radiostations/' ~ radioStation.logo) }}"
+                                             class="profile-avatar"></div>
+                    <p>
+                        <strong>Popular genres:</strong><br />
+                        {% for genre in radioStation.genres %}
+                            <span class="label label-{{ cycle(['danger', 'warning','primary'], loop.index0) }}">{{ genre.title | capitalize }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="personal"><h1 class="name">{{ radioStation.name }}</h1>
+                        <p class="description">{{ radioStation.bio }}</p>
+                        <p>
+                            <strong>Broadcast area:</strong><br />
+                            {% for province in radioStation.provinces %}
+                                <span class="label label-{{ cycle(['default', 'success','info','primary','danger','warning'], loop.index0) }}">{{ province.title | upper }}</span>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <table class="no-border no-strip skills">
+                        <tbody class="no-border-x no-border-y">
+                        <tr>
+                            <td>
+                                {% for language in radioStation.languages %}
+                                    <i class="fa fa-volume-down"></i>&nbsp;    {{ language | capitalize }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-building-o"></i>&nbsp;{{ radioStation.radioStationType | capitalize }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-phone"></i>&nbsp;{{ radioStation.contactNumber }}
+                            </td>
+                        </tr>
+                        {% if radioStation.contactEmail != "" %}
+                        <tr>
+                            <td>
+                                <i class="fa fa-envelope"></i>&nbsp;{{ radioStation.contactEmail }}
+                            </td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td>
+                                <i class="fa fa-chain"></i>&nbsp;{{ radioStation.website }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

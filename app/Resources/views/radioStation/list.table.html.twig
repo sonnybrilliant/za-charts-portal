@@ -5,6 +5,7 @@
         <th {% if pagination.isSorted('rs.id') %} class="sorted"{% endif %} style="width: 40px;">{{ knp_pagination_sortable(pagination,'#ID', 'rs.id') }}</th>
         <th {% if pagination.isSorted('rs.name') %} class="sorted"{% endif %} style="width: 100px;">{{ knp_pagination_sortable(pagination,'Title', 'rs.name') }}</th>
         <th {% if pagination.isSorted('status.title') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Status', 'status.title') }}</th>
+        <th {% if pagination.isSorted('type.title') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Type', 'type.title') }}</th>
         <th {% if pagination.isSorted('song.updatedAt') %} class="sorted"{% endif %} style="width: 50px;"><i class="fa fa-calendar"></i>&nbsp;{{ knp_pagination_sortable(pagination,'Updated At', 'rs.updatedAt') }}</th>
         <th style="width: 120px;"><i class="fa fa-cogs"></i>&nbsp;Action</th></tr>
     </thead>
@@ -13,15 +14,16 @@
     {% for radioStation in pagination %}
         <tr class="gradeA {{ cycle(['odd', 'even'], loop.index0) }}">
             <td class=" sorting_1">{{ radioStation.id }}</td>
-            <td><a href="#" title="{{ radioStation.name }}" alt="{{ radioStation.name }}">{{ radioStation.name }}</a></td>
+            <td><a href="{{ path('radio_station_profile',{slug:radioStation.slug}) }}" title="{{ radioStation.name }}" alt="{{ radioStation.name }}">{{ radioStation.name }}</a></td>
             <td>
                 <span class="label label-primary btn-sm">{{ radioStation.status.title }}</span>
 
             </td>
+            <td>{{ radioStation.radioStationType.title }}</td>
            <td>{{radioStation.updatedAt|date('Y-m-d')}}</td>
             <td>
                 {#{% if is_granted('ROLE_BATCH_PROFILE') %}#}
-                    <a class="btn btn-default btn-sm" href="" data-original-title="View" data-toggle="tooltip"><i class="fa fa-file"></i>&nbsp;View</a>
+                    <a class="btn btn-default btn-sm" href="{{ path('radio_station_profile', {slug:radioStation.slug}) }}" data-original-title="View" data-toggle="tooltip"><i class="fa fa-file"></i>&nbsp;View</a>
                 {#{% endif %}#}
             </td>
         </tr>

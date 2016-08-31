@@ -1,0 +1,49 @@
+rtmp://196.33.130.72:80/5fm/5fm.stream
+
+http://radio-int-edge-eu01-sc.antfarm.co.za:9034/5fm
+
+rtmp://cdn-radio-za-metro-sabc-metrofm.antfarm.co.za:80/metro/metro_s.stream_64k
+
+Public broadcast stations
+Ikwekwezi FM
+Lesedi FM
+Ligwalagwala FM
+Lotus FM
+Motsweding FM
+Munghana Lonene FM
+Phalaphala FM
+Radio 2000
+Radio Sonder Grense
+SAfm
+Thobela FM
+Tru-FM
+Ukhozi FM
+Umhlobo Wenene FM
+
+
+Commercial radio stations
+5FM
+567 Cape Talk
+94.5 Kfm
+94.7 Highveld Stereo
+99.2 Yfm
+Algoa FM
+Capricorn FM
+Channel Africa
+Cape Talk
+Channel Africa
+Classic FM 102.7
+East Coast Radio
+Gagasi 99.5
+Good Hope FM
+Heart 104.9 FM
+Jacaranda 94.2
+Kaya FM 95.9
+MPower FM
+Metro FM
+M Power FM
+OFM
+Talk Radio 702
+
+
+Read more: http://www.southafrica.info/abroad/streamingradio.htm#ixzz4IuiVYD7d

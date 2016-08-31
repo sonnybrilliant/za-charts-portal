@@ -1,5 +1,5 @@
 {% if is_granted('ROLE_RADIO_STATION') %}
-<li>
+<li {% if action == 'radio_station_profile' or action == 'radio_station_edit' %} class="active" {% endif %}>
     <a href="#"><i class="fa fa-volume-up"></i><span>Radio stations</span></a>
     <ul class="sub-menu">
         <li {% if action == 'radio_station_add' %} class="active" {% endif %}><a href="{{ path('radio_station_add') }}"><i class="fa fa-plus-circle"></i><span>Add radio station</span></a></li>

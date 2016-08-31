@@ -12,7 +12,7 @@ class SongController extends Controller
 {
 
     /**
-     * @Route("/song/list/active", name="song_list_active")
+     * @Route("/secured/song/list/active", name="song_list_active")
      * @param Request $request
      * @param int $page
      * @return \Symfony\Component\HttpFoundation\Response
@@ -31,7 +31,7 @@ class SongController extends Controller
         ));
     }
     /**
-     * @Route("/song/add", name="song_new")
+     * @Route("/secured/song/add", name="song_new")
      * @param Request $request
      */
     public function createAction(Request $request)
