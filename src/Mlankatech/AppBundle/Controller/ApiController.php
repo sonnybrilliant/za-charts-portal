@@ -15,9 +15,9 @@ class ApiController extends Controller
      */
     public function broadcastAction(Request $request)
     {
-        $this->get('logger')->info("==================================START");
-        $this->get('logger')->info(print_r($request->request->all(),true));
-        $this->get('logger')->info("==================================END");
+        $this->get('logger')->error("==================================START");
+        $this->get('logger')->error(print_r($request->request->all(),true));
+        $this->get('logger')->error("==================================END");
         return new Response('done');
     }
 }
