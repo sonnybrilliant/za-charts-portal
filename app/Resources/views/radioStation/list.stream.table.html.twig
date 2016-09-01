@@ -21,7 +21,7 @@
             <td>{{ stream.album }}</td>
             <td>{{ stream.label }}</td>
             <td>{{ stream.duration }}</td>
-            <td>{{ stream.radioStation.name }}</td>
+            <td><a href="{{ path('radio_station_profile',{slug:stream.radioStation.slug}) }}">{{ stream.radioStation.name }}</a></td>
            <td>{{stream.playedAt|date('Y-m-d H:i:s a')}}</td>
         </tr>
     {% endfor %}
