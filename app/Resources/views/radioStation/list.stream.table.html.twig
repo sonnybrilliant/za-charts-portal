@@ -1,0 +1,29 @@
+<table class="table no-border dataTable hover" id="datatable-icons" aria-describedby="datatable-icons_info">
+
+    <thead>
+    <tr role="row">
+        <th {% if pagination.isSorted('r.id') %} class="sorted"{% endif %} style="width: 40px;">{{ knp_pagination_sortable(pagination,'#ID', 'r.id') }}</th>
+        <th {% if pagination.isSorted('r.title') %} class="sorted"{% endif %} style="width: 100px;">{{ knp_pagination_sortable(pagination,'Title', 'r.title ') }}</th>
+        <th {% if pagination.isSorted('r.artist') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Artist', 'r.artist') }}</th>
+        <th {% if pagination.isSorted('r.album') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Album', 'r.album') }}</th>
+        <th {% if pagination.isSorted('r.label') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Label', 'r.label') }}</th>
+        <th {% if pagination.isSorted('r.duration') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Duration', 'r.duration') }}</th>
+        <th {% if pagination.isSorted('station.name') %} class="sorted"{% endif %} style="width: 50px;">{{ knp_pagination_sortable(pagination,'Station', 'station.name') }}</th>
+        <th {% if pagination.isSorted('r.playedAt') %} class="sorted"{% endif %} style="width: 50px;"><i class="fa fa-calendar"></i>&nbsp;{{ knp_pagination_sortable(pagination,'Played At', 'r.playedAt') }}</th>
+    </thead>
+
+    <tbody role="alert" aria-live="polite" aria-relevant="all">
+    {% for stream in pagination %}
+        <tr class="gradeA {{ cycle(['odd', 'even'], loop.index0) }}">
+            <td class=" sorting_1">{{ stream.id }}</td>
+            <td>{{ stream.title }}</td>
+            <td>{{ stream.artist }}</td>
+            <td>{{ stream.album }}</td>
+            <td>{{ stream.label }}</td>
+            <td>{{ stream.duration }}</td>
+            <td>{{ stream.radioStation.name }}</td>
+           <td>{{stream.playedAt|date('Y-m-d H:i:s a')}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

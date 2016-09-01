@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Mlankatech\AppBundle\Repository\RadioStationStreamRepository")
  * @ORM\Table(name="RADIO_STATION_STREAM")
  */
 class RadioStationStream

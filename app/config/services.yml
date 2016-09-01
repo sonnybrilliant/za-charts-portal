@@ -71,6 +71,10 @@ services:
         class: Mlankatech\AppBundle\Handler\RadioStation\RadioStationListHandler
         arguments: ['@app.radio.station.service','@app.alert.service','@knp_paginator']
 
+    app.handler.list.radio.station.stream:
+        class: Mlankatech\AppBundle\Handler\RadioStation\RadioStationStreamListHandler
+        arguments: ['@app.radio.station.stream.service','@app.alert.service','@knp_paginator']
+
 #Form Handlers
     app.form.artist.file.uploader:
         class: Mlankatech\AppBundle\Service\ArtistFileUploaderService

@@ -60,7 +60,7 @@ class RadioStationStreamCreateHandler
             $radioStationStream->setUpc($data->metadata->music[0]->external_ids->upc);
 
             $this->radioStationStreamService->create($radioStationStream);
-            
+
         }
 
         return true;

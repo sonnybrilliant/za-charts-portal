@@ -31,6 +31,29 @@ class RadioStationController extends Controller
             'showSelected' => $pagination['show'],
         ));
     }
+
+
+    /**
+     * @Route("/secured/radio/station/stream", name="radio_station_stream")
+     * @param Request $request
+     * @param int $page
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function listStreamAction(Request $request,$page = 1)
+    {
+        $handler = $this->get('app.handler.list.radio.station.stream');
+        $pagination = $handler->handle($request,$page);
+
+        return $this->render('radioStation/list.stream.html.twig',array(
+            'pagination' => $pagination['pagination'],
+            'action' => 'radio_station_stream',
+            'page_header' => 'Radio station stream',
+            'breadcrumb' => 'stream',
+            'showSelected' => $pagination['show'],
+        ));
+    }
+
+
     /**
      * @Route("/secured/radio/station/add", name="radio_station_add")
      * @param Request $request

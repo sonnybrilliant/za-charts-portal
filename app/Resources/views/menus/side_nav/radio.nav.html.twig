@@ -4,6 +4,7 @@
     <ul class="sub-menu">
         <li {% if action == 'radio_station_add' %} class="active" {% endif %}><a href="{{ path('radio_station_add') }}"><i class="fa fa-plus-circle"></i><span>Add radio station</span></a></li>
         <li {% if action == 'radio_station_list' %} class="active" {% endif %}><a href="{{ path('radio_station_list') }}"><i class="fa fa-list"></i><span>List radio stations</span></a></li>
+        <li {% if action == 'radio_station_stream' %} class="active" {% endif %}><a href="{{ path('radio_station_stream') }}"><i class="fa fa-headphones"></i><span>Live radio stream</span></a></li>
     </ul>
 </li>
 {% endif %}
