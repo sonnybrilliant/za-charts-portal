@@ -42,6 +42,7 @@ class RadioStationStreamCreateHandler
 
             $playedAt = new \DateTime($data->metadata->timestamp_utc);
             $playedAt->setTimezone(new \DateTimeZone('Africa/Johannesburg'));
+            $playedAt->add(new \DateInterval('PT2H'));
 
             $radioStationStream = new RadioStationStream();
             $radioStationStream->setStreamId($streamId);
