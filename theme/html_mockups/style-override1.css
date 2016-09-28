@@ -25,7 +25,7 @@ a{
   border-top: 2px solid ##FF9900;
 }
 .nav-tabs > li.active > a:after, .nav-tabs > li.active > a:hover:after, .nav-tabs > li.active > a:focus:after{
-  background-color:#FF9900;
+  background-color:#ee5037;
 }
 .nav-tabs > li > a:hover, .nav-tabs > li > a:active, .nav-tabs > li > a:focus  {
   color: #eb6100;
@@ -62,9 +62,11 @@ table td .progress {
   margin: 3px 0px;
   /* vertical-align: middle; */
 }
+/*
 table{
   border-bottom: 1px solid #ddd !important;
 }
+*/
 
 .table-options.row{
   margin:0px;
@@ -185,10 +187,12 @@ fieldset {
   min-height: 50px;
 }
 
+/*
 #cl-wrapper  {
-/*  padding-top: 88px;*/
+  padding-top: 88px;
   padding-top: 50px;
 }
+*/
 .navbar-default .navbar-brand {
 /*
     height: 88px;
@@ -449,4 +453,32 @@ fieldset {
 	Label the data
 	*/
 	#rwd-table td:before { content: attr(data-title); }
+}
+
+
+/* NEW ZA CHARTS STYLES */
+.cl-mcont .row {
+    margin-top: 0;
+}
+.table-nav {
+    margin-bottom: 10px;
+}
+.table-nav a {
+    color: inherit;
+    font-size: 12px;
+}
+.styled-tabs {
+    background-color: #f4f4f4;
+}
+.styled-tabs a {
+    color: #666;
+    font-size: 14px;
+}
+.red-bg {
+    background-color: #e11b22;
+    color: #fff;
+    font-weight: 100;
+}
+.th-sm {
+    padding: 10px!important;    
 }
