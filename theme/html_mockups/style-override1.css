@@ -542,3 +542,19 @@ fieldset {
     color: #ee5037;
     background-color: transparent;
 }
+.d-c {
+    float: none!important;
+    margin: 0 auto;
+    padding: 10% 0!important;
+}
+.flex-r-b {
+    display: flex;
+    flex-direction: row;
+}
+.flex-r-b>div {
+    border-right: 1px solid #efefef;
+    flex: 0 1 auto;
+}
+.flex-r-b>div:last-child {
+    border-right: none;
+}
