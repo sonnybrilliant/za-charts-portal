@@ -267,8 +267,11 @@ fieldset {
 .progress-bar-info {
   background-color: #0060af;
 }
+.cl-vnavigation .parent ul li {
+    border-left: 1px solid transparent;
+}
 .cl-vnavigation .parent ul li.active a {
-    background-color: #1a1c20;
+    background-color: #1e2025;
     border-left: 1px solid #fdb913;
 }
 .label-success {
@@ -482,6 +485,60 @@ fieldset {
 .th-sm {
     padding: 10px!important;    
 }
-.tab-container {
-    margin-top: 10px;
+.tab-borderless {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    padding: 20px 30px 20px 0;
+}
+.inline-tabs {
+    margin-top: 5px;
+}
+.inline-tabs > li.active > a, .inline-tabs > li.active > a:hover, .inline-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border-bottom-color: transparent;
+}
+.inline-tabs > li.active {
+    position: relative;
+}
+.inline-tabs > li {
+    font-size: 14px;
+    margin-right: 2px;
+}
+.inline-tabs > li a {
+    color: #333;
+}
+.inline-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.inline-tabs > li.active > a:after, .inline-tabs > li.active > a:hover:after, .inline-tabs > li.active > a:focus:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #ee5037;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.inline-tabs > li.active > a, .inline-tabs > li.active > a:hover, .inline-tabs > li.active > a:focus {
+/*    border-top: 2px solid #43A0F2;*/
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    box-shadow: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    position: static;
+}
+.nav.inline-tabs > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: #ee5037;
+    background-color: transparent;
 }
