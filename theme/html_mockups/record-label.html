@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="dist/images/favicon.png">
 
-    <title>ZA Charts - Radio station</title>
+    <title>ZA Charts - Record Label</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet'
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
@@ -40,6 +40,22 @@
     <style>
         .cl-x2 {
             padding-top: 35px;
+        }
+        .hero-md {
+            display: block;
+            margin-left: -20px;
+            height: 300px;
+            overflow: hidden;
+            margin-right: -20px;
+            margin-bottom: 20px;
+        }
+        .hero-md .img {
+            position: relative;
+        }
+        .hero-md img {
+            width: 100%;
+            height: auto;
+            transform: translateY(-300px);
         }
         .nav-tabs > li > a {
             font-size: 14px;
@@ -133,8 +149,8 @@
                         </li>
                         <li><a href="#"><i class="fa fa-building-o"></i><span>Record labels</span></a>
                             <ul class="sub-menu">
-                                <li><a href="add-inventory.html">Assign label</a></li>
-                                <li><a href="inventory.html">View labels</a></li>
+                                <li><a href="#">Assign label</a></li>
+                                <li class="active"><a href="#">View labels</a></li>
                                 <li><a href="#">Link artist</a></li>
                             </ul>
                         </li>
@@ -155,7 +171,7 @@
                         <li><a href="#"><i class="fa fa-volume-up"></i><span>Radio stations</span></a>
                             <ul class="sub-menu">
                                 <li><a href="#">Add operator</a></li>
-                                <li class="active"><a href="#">View operators</a></li>
+                                <li><a href="#">View operators</a></li>
                             </ul>
                         </li>
                         <li><a href="#"><i class="fa fa-building-o"></i><span>Royalty agencies</span></a>
@@ -205,143 +221,61 @@
                 <div class="col-sm-12">
                     <div class="block-flat profile-info">
                        <div class="header">
-                           <h3>Metro FM</h3>
+                           <h3>BMG South Africa</h3>
                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-10">
+                       <div class="hero-md">
+                           <div class="img">
+                               <img src="dist/images/bg4-studio.jpg" width="1024" height="784" alt="recording studio picture">
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-sm-4">
+                                <div class="avatar text-center">
+                                    <img src="dist/images/za_bmg.jpg" width="240" height="200" alt="bmg south africa logo">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="content text-center">
+                                    <div class="fact-data">
+                                        <div class="epie-chart" data-percent="45"><span>0%</span></div>
+                                    </div>
+                                    <div class="no-padding text-shadow" style="display: block;">
+                                        <h5>Total song count</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
                                 <div class="content">
-                                    <table class="no-border table-nav">
+                                    <table class="no-border no-strip skills">
                                         <tbody class="no-border-x no-border-y">
                                             <tr>
-                                                <td><i class="fa fa-volume-down fa-fw"></i>&nbsp;&nbsp;<a href="">English</a></td>
-                                                <td><i class="fa fa-building-o fa-fw"></i>&nbsp;&nbsp;<a href="">Commercial</a></td>
-                                                <td><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;<a href="">089 110 3377</a></td>
-                                                <td><i class="fa fa-envelope-o fa-fw"></i>&nbsp;&nbsp;<a href="">info@metrofm.co.za</a></td>
-                                                <td><i class="fa fa-link fa-fw"></i>&nbsp;&nbsp;<a href="">www.metrofm.co.za</a></td>
+                                                <td style="width:40%;"><strong>Registered As</strong></td>
+                                                <td>BMG South Africa</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Billing Address</strong></td>
+                                                <td>Box 232, Auckland Park, 2009</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Contact No</strong></td>
+                                                <td>011 232 4454</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Email</strong></td>
+                                                <td>info@bmgsouthafrica.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Contact Person</strong></td>
+                                                <td>John Doe</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <div class="avatar">
-                                    <img src="dist/images/metro_fm_logo.jpg" class="profile-avatar">
-                                </div>
-                            </div>
-                            <div class="col-sm-10">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin in risus eget tempor. Cras non lectus lacus. Sed nisl neque, tincidunt lobortis urna eget, aliquam imperdiet augue. Proin auctor suscipit felis, sed faucibus orci consectetur vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ut finibus lorem, nec sagittis lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus congue urna dui, vel semper magna tempus eu.</p>
-                                
-                                <table class="no-border no-strip skills">
-                                    <tbody class="no-border-x no-border-y">
-                                        <tr>
-                                            <td><strong>Province</strong></td>
-                                            <td>Gauteng | Limpopo | Eastern Cape | Western Cape | Northern Cape | North West</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Popular Genres</strong></td>
-                                            <td>Kwaito | Hip Hop | Jazz | Rhythm and Blues</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-           
-<!--
-           <div class="row">
-               <div class="col-sm-12">
-                   <div class="block-flat">
-                       <div class="header">
-                           <h3>Metro FM</h3>
-                       </div>
-                       <div class="tab-container tab-right">
-                           <ul class="nav nav-tabs flat-tabs">
-                               <li class="active"><a href="#about" data-toggle="tab">About</a></li>
-                               <li><a href="#province" data-toggle="tab">Province</a></li>
-                               <li><a href="#genre" data-toggle="tab">Genre</a></li>
-                               <li><a href="#contact" data-toggle="tab">Contact</a></li>
-                           </ul>
-                            Tab Content 
-                           <div class="tab-content">
-                               <div class="tab-pane active cont fade in" id="about">
-                                   <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="avatar">
-                                                <img src="dist/images/metro_fm_logo.jpg" class="profile-avatar">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin in risus eget tempor. Cras non lectus lacus. Sed nisl neque, tincidunt lobortis urna eget, aliquam imperdiet augue. Proin auctor suscipit felis, sed faucibus orci consectetur vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ut finibus lorem, nec sagittis lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus congue urna dui, vel semper magna tempus eu.</p>
-                                        </div>
-                                    </div>
-                               </div>
-                               <div class="tab-pane fade cont" id="province">
-                                   <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="avatar">
-                                                <img src="dist/images/metro_fm_logo.jpg" class="profile-avatar">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <ul>
-                                               <li>Gauteng</li>
-                                               <li>Limpopo</li>
-                                               <li>Eastern Cape</li>
-                                               <li>Western Cape</li>
-                                               <li>Northern Cape</li>
-                                               <li>North West</li>
-                                           </ul>
-                                        </div>
-                                    </div>
-                               </div>
-                               <div class="tab-pane fade" id="genre">
-                                   <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="avatar">
-                                                <img src="dist/images/metro_fm_logo.jpg" class="profile-avatar">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <ul>
-                                              <li>Kwaito</li>
-                                               <li>Hip Hop</li>
-                                               <li>Jazz</li>
-                                               <li>Rhythm and Blues</li>
-                                               <li>Qhom</li>
-                                           </ul>
-                                        </div>
-                                    </div>
-                               </div>
-                               <div class="tab-pane fade" id="contact">
-                                   <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="avatar">
-                                                <img src="dist/images/metro_fm_logo.jpg" class="profile-avatar">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <ul>
-                                                <li><i class="fa fa-volume-down fa-fw"></i>&nbsp;&nbsp;<a href="">English</a></li>
-                                                <li><i class="fa fa-building-o fa-fw"></i>&nbsp;&nbsp;<a href="">Commercial</a></li>
-                                                <li><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;<a href="">089 110 3377</a></li>
-                                                <li><i class="fa fa-envelope-o fa-fw"></i>&nbsp;&nbsp;<a href="">info@metrofm.co.za</a></li>
-                                                <li><i class="fa fa-link fa-fw"></i>&nbsp;&nbsp;<a href="">www.metrofm.co.za</a></li>
-                                           </ul>
-                                        </div>
-                                    </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
--->
            
             <div class="row">
                 <div class="col-md-12">

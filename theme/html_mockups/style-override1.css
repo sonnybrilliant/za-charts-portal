@@ -482,3 +482,6 @@ fieldset {
 .th-sm {
     padding: 10px!important;    
 }
+.tab-container {
+    margin-top: 10px;
+}
