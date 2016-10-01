@@ -565,3 +565,105 @@ fieldset {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: #0a0909;
 }
+
+/* Image Back */
+.hero-label-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/bg4-studio.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+}
+.hero-song-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/music-instrument-vinyl.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+}
+.hero-artist-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/stage-microphone.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+}
+.hero-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    flex-direction: column;
+}
+.hero-data>span {
+    flex: none;
+}
+.hero-meta {
+    font-size: 12px;
+}
+.tab-pane .avatar img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* Inline Styles */
+.cl-x2 {
+    padding-top: 35px;
+}
+.hero-icon {
+    width: 80px;
+    height: 80px;
+}
+.hero-md {
+    display: block;
+    margin-left: -20px;
+    height: 240px;
+    overflow: hidden;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    margin-top: -20px;
+    position: relative;
+}
+.hero-md .img {
+    position: relative;
+}
+.hero-icon img {
+    width: 100%;
+    height: auto;
+}
+/*
+@media (min-width: 768px) {
+    .hero-md img {
+        transform: translateY(-300px);
+    }
+}
+*/
+.nav-tabs > li > a {
+    font-size: 14px;
+}
+.m-t {
+    margin-top: 20px;
+}
+.list-artwork li img {
+    width: 100%;
+    height: auto;
+}
+.list-artwork li .img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+.list-artwork li {
+    display: block;
+    float: left;
+}
+.list-artwork {
+    list-style-type: none;
+    padding: 0;
+}
+.metadata .meta-title {
+    margin-bottom: 0;
+}
+.metadata p {
+    margin-top: 0;
+}
