@@ -174,7 +174,7 @@ fieldset {
   text-align: left;
   width: 206px;
   color: #FFF;
-  background: url(dist/images/za-charts-logo-white-xs.png) no-repeat no-repeat 13px 12px;
+  background: url(dist/images/za-charts-logo-white-xs.png) no-repeat no-repeat 13px 8px;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   font-weight: 300;
   font-size: 19px;
@@ -187,12 +187,9 @@ fieldset {
   min-height: 50px;
 }
 
-/*
 #cl-wrapper  {
-  padding-top: 88px;
-  padding-top: 50px;
+  padding-top: 52px;
 }
-*/
 .navbar-default .navbar-brand {
 /*
     height: 88px;
@@ -227,7 +224,7 @@ fieldset {
 }
 
 .profile_menu .dropdown-toggle {
-/*  padding: 29px 17px;*/
+  padding: 10px 17px;
   vertical-align: middle;
 /*  height: 88px;*/
     height: 100%;
@@ -242,8 +239,8 @@ fieldset {
 }
 
 .navbar-default .navbar-nav > li.button{
-/*  padding: 29px 6px;*/
-  padding: 17px 6px;
+/*  padding: 10px 17px;*/
+  padding: 11px 17px;
   float: left;
 }
  .navbar-default .navbar-toggle{
@@ -557,4 +554,14 @@ fieldset {
 }
 .flex-r-b>div:last-child {
     border-right: none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    background-color: #0a0909;
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+    transition: all .2s ease;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #0a0909;
 }
