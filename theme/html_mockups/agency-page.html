@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="dist/images/favicon.png">
+
+    <title>ZA Charts - Agency</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="dist/fonts/font-awesome-4/css/font-awesome.min.css">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="dist/js/jquery.gritter/css/jquery.gritter.css"/>
+
+    <link rel="stylesheet" type="text/css" href="dist/js/jquery.nanoscroller/nanoscroller.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/js/jquery.easypiechart/jquery.easy-pie-chart.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/js/bootstrap.switch/bootstrap-switch.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="dist/js/bootstrap.datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/js/jquery.select2/select2.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/js/bootstrap.slider/css/slider.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/js/intro.js/introjs.css"/>
+    <!-- Custom styles for this template -->
+    <link href="dist/css/style.css" rel="stylesheet"/>
+    <link href="style-override1.css" rel="stylesheet"/>
+    
+</head>
+<body>
+
+<!-- Fixed navbar -->
+<div id="head-nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="fa fa-user"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+          <li class="dropdown-submenu"><a href="#">Sub menu</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              </ul>
+          </li>              
+          </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Large menu <b class="caret"></b></a>
+          <ul class="dropdown-menu col-menu-2">
+            <li class="col-sm-6 no-padding">
+              <ul>
+              <li class="dropdown-header"><i class="fa fa-group"></i>Users</li>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="dropdown-header"><i class="fa fa-gear"></i>Config</li>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li> 
+              </ul>
+            </li>
+            <li class="col-sm-6 no-padding">
+              <ul>
+              <li class="dropdown-header"><i class="fa fa-legal"></i>Sales</li>
+              <li><a href="#">New sale</a></li>
+              <li><a href="#">Register a product</a></li>
+              <li><a href="#">Register a client</a></li> 
+              <li><a href="#">Month sales</a></li>
+              <li><a href="#">Delivered orders</a></li>
+              </ul>
+            </li>
+          </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right user-nav">
+                <li class="dropdown profile_menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img alt="Avatar" src="dist/images/avatar2.jpg"/><span>Welcome Don</span>
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Messages</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right not-nav">
+
+                <li class="button dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-globe"></i><span class="bubble">11</span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="nano nscroller">
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-cloud-upload info"></i><b>Daniel</b> is now
+                                            following you <span class="date">2 minutes ago.</span></a></li>
+                                        <li><a href="#"><i class="fa fa-male success"></i> <b>Michael</b> is now
+                                            following you <span class="date">15 minutes ago.</span></a></li>
+                                        <li><a href="#"><i class="fa fa-bug warning"></i> <b>Mia</b> commented on post
+                                            <span class="date">30 minutes ago.</span></a></li>
+                                        <li><a href="#"><i class="fa fa-credit-card danger"></i> <b>Andrew</b> killed
+                                            someone <span class="date">1 hour ago.</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="foot">
+                                <li><a href="#">View all activity </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div><!--/.nav-collapse animate-collapse -->
+    </div>
+</div>
+
+<div id="cl-wrapper">
+    <div class="cl-sidebar" data-position="right" data-step="1" data-intro="<strong>Fixed Sidebar</strong> <br/> It adjust to your needs.">
+        <div class="cl-toggle"><i class="fa fa-bars"></i></div>
+        <div class="cl-navblock">
+            <div class="menu-space">
+                <div class="content">
+                    <div class="side-user">
+                        <div class="info">
+                            <p>Total playlisted songs: 5891 / 6980<a href="#"><i class="fa fa-plus"></i></a></p>
+                            <div class="progress progress-user">
+                                <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40"
+                                     role="progressbar" class="progress-bar progress-bar-info">
+                                    <span class="sr-only">50% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="cl-vnavigation">
+                        <li><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
+
+                        </li>
+                        <li><a href="#"><i class="fa fa-building-o"></i><span>Record labels</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Assign label</a></li>
+                                <li><a href="#">View labels</a></li>
+                                <li><a href="#">Link artist</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-microphone"></i><span>Artists</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#"><i class="fa fa-plus-circle"></i><span>Add new artist</span></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-list"></i><span>List artists</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-music"></i><span>Songs</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Nation</a></li>
+                                <li><a href="#">Provincial</a></li>
+                                <li><a href="#">Top 20</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-volume-up"></i><span>Radio stations</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Add operator</a></li>
+                                <li><a href="#">View operators</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-building-o"></i><span>Royalty agencies</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Add operator</a></li>
+                                <li class="active"><a href="#">View operators</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bar-chart-o nav-icon"></i><span>Reports</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Available reports</a></li>
+                                <li><a href="#">Redeemed vouchers</a></li>
+                                <li><a href="#">3rd party vouchers</a></li>
+                                <li><a href="#">Vouchers sent</a></li>
+                                <li><a href="#">Voucher lookup</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-user"></i><span>Users</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Promo SMS list</a></li>
+                                <li><a href="#">Add promo SMS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gears"></i><span>Settings</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Promo SMS list</a></li>
+                                <li><a href="#">Add promo SMS</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="text-right collapse-button" style="padding:7px 9px;">
+
+                <button id="sidebar-collapse" class="btn btn-default" style=""><i style="color:#fff;" class="fa fa-angle-left"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="pcont">
+
+       <div class="page-head">
+            <h2>Agency</h2>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clients.html">Agency</a></li>
+                <li class="active">Samro</li>
+            </ol>
+        </div>
+        
+        <div class="cl-mcont">
+
+           <div class="row">
+                <div class="col-sm-12">
+                    <div class="block-flat profile-info">
+<!--
+                       <div class="header">
+                           <h3>BMG South Africa</h3>
+                       </div>
+-->
+<!--
+                       <div class="hero-md">
+                           <div class="img">
+                               <img src="dist/images/bg4-studio.jpg" width="1024" height="784" alt="recording studio picture">
+                            </div>
+                       </div>
+-->
+                      
+                      <div class="hero-md">
+                           <div class="hero-agency-image">
+                               <div class="hero-data">
+                                   <span class="hero-icon">
+                                       <img src="dist/images/record-label-icon.png" alt="">
+                                    </span>
+                                   <span class="hero-meta text-center">
+                                      <h2 class="meta-title">SAMRO</h2>
+                                       <strong>Registered:</strong>&nbsp;&nbsp;23 October 2015 | <strong>Contact No:</strong>&nbsp;&nbsp;011 234 4000 | <strong>Email:</strong>&nbsp;&nbsp;info@gmail.com
+                                   </span>
+                               </div>
+                            </div>
+                       </div>
+                      
+<!--
+                       <div class="row flex-r-b">
+                            <div class="col-sm-4">
+                                <div class="avatar text-center">
+                                    <img src="dist/images/record_label_placeholder.jpg" width="200" height="200" alt="microphone placeholder image">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="content text-center">
+                                    <div class="stat-data d-c">
+                                        <div class="stat-blue">
+                                            <h2>1,254</h2>
+                                            <span>Total Sales</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="content">
+                                    <table class="no-border no-strip skills">
+                                        <tbody class="no-border-x no-border-y">
+                                            <tr>
+                                                <td style="width:40%;"><strong>Registered As</strong></td>
+                                                <td>BMG South Africa</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Billing Address</strong></td>
+                                                <td>Box 232, Auckland Park, 2009</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Contact No</strong></td>
+                                                <td>011 232 4454</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Email</strong></td>
+                                                <td>info@bmgsouthafrica.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:40%;"><strong>Contact Person</strong></td>
+                                                <td>John Doe</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-container m-t">
+                        <ul class="nav nav-tabs styled-tabs">
+                            <li class="active"><a data-toggle="tab" href="#lastSongs">Top Earning Songs</a></li>
+                            <li><a data-toggle="tab" href="#stPlaylist">Recording Labels</a></li>
+                            <li><a data-toggle="tab" href="#plistComp">Revenue Analysis</a></li>
+                            <li><a data-toggle="tab" href="#stManager">Transactions</a></li>
+                            <li><a data-toggle="tab" href="#labelDetails">Record Label Details</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane active cont">
+                                
+                                <div class="content">
+                                    <div>
+                                        <div id="datatable2_wrapper" class="dataTables_wrapper form-inline" role="grid">
+                                            <div class="table-responsive">
+                                                <table class="no-border dataTable" aria-describedby="datatable2_info">
+                                                    <thead class="red-bg no-border">
+                                                        <tr role="row">
+                                                            <th class="th-sm">Code</th>
+                                                            <th class="th-sm">Song Name</th>
+                                                            <th class="th-sm">Artist</th>
+                                                            <th class="th-sm">Label</th>
+                                                            <th class="th-sm">Duration</th>
+                                                            <th class="th-sm">Time Stamp</th>
+                                                            <th class="th-sm">Preview</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody class="no-border-x no-border-y">
+                                                        <tr>
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Firefox 1.0</td>
+                                                            <td class=" ">Win 98+ / OSX.2+</td>
+                                                            <td class="center ">1.7</td>
+                                                            <td class="center ">1.7</td>
+                                                            <td class="center ">1.7</td>
+                                                            <td class="center ">1.7</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Firefox 1.5</td>
+                                                            <td class=" ">Win 98+ / OSX.2+</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Firefox 2.0</td>
+                                                            <td class=" ">Win 98+ / OSX.2+</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr class="gradeA even">
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Firefox 3.0</td>
+                                                            <td class=" ">Win 2k+ / OSX.3+</td>
+                                                            <td class="center ">1.9</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Camino 1.0</td>
+                                                            <td class=" ">OSX.2+</td>
+                                                            <td class="center ">1.8</td>
+
+                                                        </tr>
+                                                        <tr class="gradeA even">
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Camino 1.5</td>
+                                                            <td class=" ">OSX.3+</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Netscape 7.2</td>
+                                                            <td class=" ">Win 95+ / Mac OS 8.6-9.2</td>
+                                                            <td class="center ">1.7</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr class="gradeA even">
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Netscape Browser 8</td>
+                                                            <td class=" ">Win 98SE+</td>
+                                                            <td class="center ">1.7</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Netscape Navigator 9</td>
+                                                            <td class=" ">Win 98+ / OSX.2+</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                        <tr class="gradeA even">
+                                                            <td class=" sorting_1">Gecko</td>
+                                                            <td class=" ">Mozilla 1.0</td>
+                                                            <td class=" ">Win 95+ / OSX.1+</td>
+                                                            <td class="center ">1</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                            <td class="center ">1.8</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="row"><div class="col-sm-12"><div class="pull-left"><div class="dataTables_info" id="datatable2_info">Showing 1 to 10 of 57 entries</div></div><div class="pull-right"><div class="dataTables_paginate paging_bs_normal"><ul class="pagination"><li class="prev disabled"><a href="#"><span class="fa fa-angle-left"></span>&nbsp;Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next&nbsp;<span class="fa fa-angle-right"></span></a></li></ul></div></div><div class="clearfix"></div></div></div></div>							
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="dist/js/jquery.js"></script>
+<script type="text/javascript" src="dist/js/jquery.gritter/js/jquery.gritter.js"></script>
+
+<script type="text/javascript" src="dist/js/jquery.nanoscroller/jquery.nanoscroller.js"></script>
+<script type="text/javascript" src="dist/js/behaviour/general.js"></script>
+<script src="dist/js/jquery.ui/jquery-ui.js" type="text/javascript"></script>
+<script type="text/javascript" src="dist/js/jquery.sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="dist/js/jquery.easypiechart/jquery.easy-pie-chart.js"></script>
+<script type="text/javascript" src="dist/js/jquery.nestable/jquery.nestable.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.switch/bootstrap-switch.min.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="dist/js/jquery.select2/select2.min.js" type="text/javascript"></script>
+<script src="dist/js/skycons/skycons.js" type="text/javascript"></script>
+<script src="dist/js/bootstrap.slider/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="dist/js/intro.js/intro.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        //initialize the javascript
+        App.init({
+            nanoScroller: false
+        });
+
+        App.dashBoard();
+
+        //introJs().setOption('showBullets', false).start();
+
+    });
+</script>
+<script src="dist/js/behaviour/voice-commands.js"></script>
+<script src="dist/js/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="dist/js/jquery.flot/jquery.flot.js"></script>
+<script type="text/javascript" src="dist/js/jquery.flot/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="dist/js/jquery.flot/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="dist/js/jquery.flot/jquery.flot.labels.js"></script>
+</body>
+</html>

@@ -585,6 +585,12 @@ fieldset {
     background-size: cover;
     height: 100%;
 }
+.hero-agency-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/vinyl-crates.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+}
 .hero-data {
     display: flex;
     justify-content: center;
