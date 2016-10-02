@@ -679,3 +679,9 @@ fieldset {
 .metadata p {
     margin-top: 0;
 }
+.cta-bar {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: inline-block;
+}
