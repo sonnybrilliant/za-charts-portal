@@ -568,25 +568,31 @@ fieldset {
 
 /* Image Back */
 .hero-label-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/bg4-studio.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/recording_label.jpg) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     height: 100%;
 }
 .hero-song-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/music-instrument-vinyl.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/hip_hop_image.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+}
+.hero-afro-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/maskandi_image.jpg) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     height: 100%;
 }
 .hero-artist-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/stage-microphone.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/afro_pop_image.jpg) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     height: 100%;
 }
 .hero-agency-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/vinyl-crates.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(dist/images/backgrounds/agency.jpg) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     height: 100%;
