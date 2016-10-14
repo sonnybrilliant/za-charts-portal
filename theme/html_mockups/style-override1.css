@@ -226,8 +226,7 @@ fieldset {
 .profile_menu .dropdown-toggle {
   padding: 10px 17px;
   vertical-align: middle;
-/*  height: 88px;*/
-    height: 100%;
+  height: 52px;
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-menu li > a:hover {
     background-color: #2391ed;
